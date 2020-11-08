@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validator</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="registro.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Registrese por favor!</h1>
+    <!-- Form -->
+    <form id="form" action="index.html">
+      <!-- Full Name -->
+      <div class="form-group">
+        <label for="name">Nombres</label>
+        <input type="text" id="name" name="name" placeholder="Nombres" required minlength="3" maxlength="100">
+      </div>
+      <!-- Email Address -->
+      <div class="form-group">
+        <label for="email">Correo Electrónico</label>
+        <input type="email" id="email" name="email" placeholder="email@dirección.com" required>
+      </div>
+      <!-- Password -->
+      <div class="form-group">
+        <label for="password1">Contraseña</label>
+        <input type="password" id="password1" placeholder="Crear contraseña (Mín. 6 caracteres)" 
+               required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$"
+               title="Please include at least 1 uppercase character, 1 lowercase character, and 1 number.">
+      </div>
+      <!-- Confirm Password -->
+      <div class="form-group">
+        <label for="password2">Confirme contraseña</label>
+        <input type="password" id="password2" placeholder="Confirmar contraseña"
+               required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$" name="password">
+      </div>
+      <button type="submit">Registrar</button>
+    </form>
+    <!-- Error/Success Message -->
+  </div>
+  <!-- Script -->
+  <script src="registro.css"></script>
+</body>
+</html>
